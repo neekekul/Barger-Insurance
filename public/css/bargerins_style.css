@@ -1,0 +1,38 @@
+body{
+
+    font-family: europa, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+body #main{
+    padding: 0;
+    height: 100%;
+    background-color: #eaedf1;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
+}
+
+#main nav{
+    font-family: europa, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+#main nav #drop li{
+
+    border-top: 1px solid rgba(255,255,255,.5);
+}
+
+#carouselExampleIndicators{
+    width: 50%;
+}
+
+.carousel-inner img {
+      width: 100%;
+      height: 100%;
+    opacity: 0.89;
+}
