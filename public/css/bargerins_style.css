@@ -3,8 +3,6 @@ body{
     font-family: europa, sans-serif;
     font-style: normal;
     font-weight: 100;
-    padding-left: 0;
-    padding-right: 0;
 
 }
 
@@ -24,15 +22,163 @@ body #main{
 
 #main nav #drop li{
 
-    border-top: 1px solid rgba(255,255,255,.5);
+    border-top: 1px dotted rgba(255,255,255,.5);
+}
+
+#main .container-fluid{
+
+    height: 100%;
+
+}
+
+#main .container-fluid #bargerLogo{
+    background-color: white;
+    height: 8vw;
+}
+
+#main .container-fluid #bargerLogo .col{
+
+}
+
+#main .container-fluid #intro #gallery{
+    width: 50%;
+    padding: 0;
+
+}
+
+#main .container-fluid #intro #quote{
+
+    background-color: #c44200;
+    width: 50%;
+    height:36.22vw;
+    color: white;
+    text-align: center;
+
+}
+
+#main .container-fluid #intro #quote #savings{
+    font-size: 4.2vw;
+	margin-top: 1.1vw;
+	margin-bottom: -60px;
+}
+
+#main .container-fluid #intro #quote p{
+    font-size: 2vw;
+	margin-top: 8vw;
+	text-align: center;
+}
+
+#main .container-fluid #intro #quote #call{
+    font-size: 2vw;
+	margin-top: 1.5vw;
+	text-align: center;
+}
+
+#main .container-fluid #intro #quote a{
+    font-size: 4vw;
+    color: white;
+    text-decoration: none;
+}
+
+#main .container-fluid #intro #quote a:hover{
+    color: #5e3449;
+	text-decoration: underline;
+}
+
+#main .container-fluid #intro #quote a:active{
+    color: #0645AD;
+	text-decoration: underline;
+}
+
+#main .container-fluid #intro #quote form{
+    height: 8vw;
+}
+
+#main .container-fluid #intro #quote form #bestbutton{
+	margin-top: 1vw;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+	border-radius: 6px;
+	width: 55%;
+	height: 60%;
+	font-size: 1.5vw;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+
+}
+
+#main .container-fluid #intro #quote form #bestbutton:active{
+	transform: translateY(3px);
+}
+
+#main .container-fluid #logos{
+
+    background-color: #001e62;
+    opacity: 0.9;
+    height: 20vw;
+}
+
+#main .container-fluid #logos #keystoneLogo{
+    color: white;
+    text-align: center;
+
+}
+
+#main .container-fluid #address{
+    background-color: #0082c4;
+    color: white;
+    text-align: center;
+}
+
+#main .container-fluid #address #adair{
+    font-size: 1.3vw;
+    margin-top: 2vw;
+}
+
+#main .container-fluid #address #green{
+    font-size: 1.3vw;
+    margin-top: 2vw;
+}
+
+#main .container-fluid #address #adair a{
+    text-decoration: none;
+    color: white;
+}
+
+#main .container-fluid #address #adair a:hover{
+    color: #5e3449;
+	text-decoration: underline;
+}
+
+#main .container-fluid #address #adair a:active{
+    color: #0645AD;
+}
+
+#main .container-fluid #address #green a{
+    text-decoration: none;
+    color: white;
+}
+
+#main .container-fluid #address #green a:hover{
+    color: #5e3449;
+	text-decoration: underline;
+}
+
+#main .container-fluid #address #green a:active{
+    color: #0645AD;
 }
 
 #carouselExampleIndicators{
-    width: 50%;
+    width: 100%;
 }
 
 .carousel-inner img {
       width: 100%;
       height: 100%;
-    opacity: 0.89;
+    opacity: 0.86;
 }
+
+
