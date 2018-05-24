@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/login', 'SessionsController@onCreate');
+Route::post('/login', 'SessionsController@makeSession');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/register', 'RegistrationController@onCreate');
+Route::post('/register', 'RegistrationController@onStore');
+
+Route::get('/logout', 'SessionsController@destroy');
