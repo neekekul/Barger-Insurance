@@ -215,6 +215,19 @@ body #main{
     opacity: 0.86;
 }
 
+#flash-message {
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+    z-index: 10;
+    animation: flash-message 4s forwards;
+}
+
+@keyframes flash-message {
+    0%   {opacity: 1;}
+    100% {opacity: 0; display:none;}
+}
+
 
 
 

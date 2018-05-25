@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class SessionsController extends Controller
@@ -43,17 +42,13 @@ class SessionsController extends Controller
      * @return back()->withErrors(['message' => 'username or password is incorrect!']);
      *
      */
-    public function makeSession(){
-        //completely validate the input or request
-        $this->validate(request(), [
-            'email' => 'required|email|string|max:60',
-            'password' => 'required|string|alpha_dash|min:6|max:100',
-        ]);
+    public function makeSession(LoginRequest $request){
 
 
             if (auth()->attempt(['email' => request('email'), 'password' => request('password')])){
+                session()->flash('message', 'Logged in');
 
-                return redirect('/');
+                return redirect()->home();
             }
             else{
 
@@ -67,9 +62,10 @@ class SessionsController extends Controller
     }
 
     public function destroy(){
+        session()->flash('message', 'Logged out');
 
         auth()->logout();
 
-        return redirect('/');
+        return redirect()->home();
     }
 }

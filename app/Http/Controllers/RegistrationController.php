@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
+use App\Mail\WelcomeToBarger;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\RegistrationRequest;
 
 class RegistrationController extends Controller
 {
@@ -40,25 +41,17 @@ class RegistrationController extends Controller
      * @return view('/registration', compact('msg'))
      *
      */
-    public function onStore(){
+    public function onStore(RegistrationRequest $request){
 
-        //first completely validate the users input
-        $this->validate(request(), [
-
-            'username' => 'required|string|alpha_dash|max:60',
-            'email' => 'required|email|string|max:60',
-            'password' => 'required|string|alpha_dash|min:6|max:100|confirmed',
-            'password_confirmation' => 'required|string|alpha_dash|min:6|max:100',
-        ]);
 
         //pull all validated inputs into variables
-        $username = request('username');
+        $username = $request->username;
 
-        $email = request('email');
+        $email = $request->email;
 
-        $password = request('password');
+        $password = $request->password;
 
-        $passCheck = request('password_confirmation');
+        $passCheck = $request->password_confirmation;
 
 
         //count instances of said email address
@@ -70,15 +63,15 @@ class RegistrationController extends Controller
             //if there are no accounts with the same email address
             if($count == 0){
 
-                    $usr = new User;
-                    $usr->name = $username;
-                    $usr->email = $email;
-                    $usr->password = $hashed;
+                    $user = new User;
+                    $user->name = $username;
+                    $user->email = $email;
+                    $user->password = $hashed;
 
                 //if the model is successfully saved to the database
-                if($usr->save()){
+                if($user->save()){
                     //set a success message
-                    $msg = "Successfully Registered!";
+                    $msg = "Successfully registered";
                 }
                 else{
                     //set a failure message
@@ -90,9 +83,15 @@ class RegistrationController extends Controller
                 $msg = "The account that you are registering already exists.";
             }
 
+        auth()->login($user);
+
+        Mail::to($user)->send(new WelcomeToBarger($user));
+
+        session()->flash('message', $msg);
+
 
         //return the same view, so the same registration page will show again.
         //Only this time it has the $msg sent through
-        return view('/register', compact('msg'));
+        return redirect()->home();
     }
 }
