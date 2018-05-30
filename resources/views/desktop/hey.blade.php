@@ -1,3 +1,7 @@
-@extends('layouts.biHead')
+@extends('layouts.biMeta')
 
+
+@section('content')
+
+@endsection
 
