@@ -216,8 +216,8 @@ body #main{
 }
 
 #flash-message {
-    bottom: 20px;
-    right: 20px;
+    bottom: 412px;
+    right: 712px;
     position: absolute;
     z-index: 10;
     animation: flash-message 4s forwards;
