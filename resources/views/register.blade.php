@@ -7,15 +7,14 @@
     @include('layouts.biHead')
     <div class="container-fluid">
        @include('layouts.landing.biLogo')
-        <div class="row justify-content-around align-items-center" style="background-color: white;">
+        <div class="row justify-content-around align-items-end" style="background-color: white;">
             <div class="col-6">
 
                 <form method="post" style="width:100%;">
                     @include('layouts.message')
 
                     {{ csrf_field() }}
-                  <br>
-                  <br>
+                  
                        <label for="email">Email:</label>
                         <div class="input-group">
                             <input id="email" type="email" class="form-control" name="email" placeholder="" autocomplete="Off" maxlength="60" required>
@@ -42,7 +41,7 @@
                         @include('layouts.errors')
                 </form>
             </div>
-            <div class="col-6" style="text-align: center; margin-top: 0vw;">
+            <div class="col-4" style="text-align: center; margin-top: 0vw;">
                             <h5 style="margin-bottom: vw;">Already have an account? Click the button below to sign in!</h5>
                             <br>
                             <form action="/login" method="GET">
