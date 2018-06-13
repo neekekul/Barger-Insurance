@@ -10,7 +10,7 @@ body #main{
     padding: 0;
     height: 100%;
     background-color: #eaedf1;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 
 }
 
@@ -184,6 +184,23 @@ body #main{
     color: #0645AD;
 }
 
+#main .container-fluid #meet{
+    background-color: white;
+    color: white;
+    text-align: center;
+}
+
+#main .container-fluid #meet #profile{
+    background-color: white;
+    height: 14vw;
+
+}
+
+#main .container-fluid #meet #piece{
+    background-color: #eaedf1;
+    height: 14vw;
+}
+
 #main .container-fluid #copyright{
     background-color: white;
     height: 3.5vw;
@@ -221,8 +238,8 @@ body #main{
 }
 
 #flash-message {
-    bottom: 20vw;
-    right: 47vw;
+    bottom: 42vw;
+    right: 80vw;
     position: absolute;
     z-index: 10;
     animation: flash-message 4s forwards;

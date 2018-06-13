@@ -13,14 +13,15 @@ border-top: 1px dotted rgba(255,255,255,.5);
     @endif
     <nav class="navbar sticky-top justify-content-between navbar-dark bg-dark" style="background-color: #0082c4;">
               <a class="navbar-brand" href="/">Barger Insurance</a>
+              
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
               @if(auth()->user())
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span>{{auth()->user()->name}}</span>
                 </button>
               @endif
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                <br>
                 <ul id="drop" class="navbar-nav">
@@ -37,7 +38,7 @@ border-top: 1px dotted rgba(255,255,255,.5);
                     <a class="nav-link" href="#">Service</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Meet Our Staff</a>
+                    <a class="nav-link" href="/meet">Meet Our Staff</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Insurance Solutions</a>

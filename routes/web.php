@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/login', 'SessionsController@onCreate');
 Route::post('/login', 'SessionsController@makeSession');
 
 Route::get('/register', 'RegistrationController@onCreate');
 Route::post('/register', 'RegistrationController@onStore');
+
+Route::get('/meet', 'FeatureController@onCreateMeet');
 
 Route::get('/logout', 'SessionsController@destroy');
