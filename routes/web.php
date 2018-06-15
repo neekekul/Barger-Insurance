@@ -21,4 +21,8 @@ Route::post('/register', 'RegistrationController@onStore');
 
 Route::get('/meet', 'FeatureController@onCreateMeet');
 
+Route::get('/blog', 'FeatureController@onCreateBlog');
+Route::get('/post', 'AccountController@onCreatePost');
+Route::post('/post', 'AccountController@postStore');
+
 Route::get('/logout', 'SessionsController@destroy');

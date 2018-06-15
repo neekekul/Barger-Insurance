@@ -1,9 +1,4 @@
-
-<!--
-border-top: 1px dotted rgba(255,255,255,.5);
- -->
-
-    @if(auth()->user())
+@if(auth()->user())
         <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
           <h4 class="text-white">You are logged in!</h4>
@@ -26,27 +21,18 @@ border-top: 1px dotted rgba(255,255,255,.5);
                <br>
                 <ul id="drop" class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/blog">Blog</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Service</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/meet">Meet Our Staff</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Insurance Solutions</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Keystone Membership Info</a>
-                  </li>
                   @if(auth()->user())
+                  <li class="nav-item">
+                    <a class="nav-link" href="/browse">Browse Posts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/post">Make a Post {{ auth()->user()->name }}</a>
+                  </li>
                   <li class="nav-item">
                       <a class="nav-link" href="/logout">Logout</a>
                   </li>

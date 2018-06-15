@@ -15,6 +15,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+    	$img = Image::make(public_path('/images/before/IMG_courthouse.jpg'));
+    	$img->save(public_path('/images/courthouse.jpg'));
         
         return view('/welcome', compact('img'));
     }

@@ -10,22 +10,22 @@
                       </ol>
                       <div class="carousel-inner">
                         <div class="carousel-item active">
-                          <img src="{{URL::asset('/images/IMG_courthouse.jpg')}}" alt="First slide">
+                          <img src="{{URL::asset('/images/courthouse.jpg')}}" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                          <img src="{{URL::asset('/images/IMG_2587.JPG')}}" alt="Second slide">
+                          <img src="{{URL::asset('/images/before/IMG_2587.JPG')}}" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                          <img src="{{URL::asset('/images/IMG_2611.JPG')}}" alt="Third slide">
+                          <img src="{{URL::asset('/images/before/IMG_2611.JPG')}}" alt="Third slide">
                         </div>
                         <div class="carousel-item">
-                          <img src="{{URL::asset('/images/IMG_nanwood.jpg')}}" alt="Fourth slide">
+                          <img src="{{URL::asset('/images/before/IMG_nanwood.jpg')}}" alt="Fourth slide">
                         </div>
                         <div class="carousel-item">
-                          <img src="{{URL::asset('/images/IMG_4248.JPG')}}" alt="Fifth slide">
+                          <img src="{{URL::asset('/images/before/IMG_4248.JPG')}}" alt="Fifth slide">
                         </div>
                         <div class="carousel-item">
-                          <img src="{{URL::asset('/images/IMG_church.jpg')}}" alt="Sixth slide">
+                          <img src="{{URL::asset('/images/before/IMG_church.jpg')}}" alt="Sixth slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -14,10 +14,52 @@ body #main{
 
 }
 
+#meat{
+    background-color: #eaedf1;
+    height: 46.79vw;
+    overflow-y: auto;
+}
+
+#meat form{
+    float: left;
+    width: 100%;
+}
+
+#meat form button{
+    width: 100%;
+    height: 4vw;
+}
+
+#meat form #msg{
+   
+    text-align: center;
+
+}
+
+#meat form #one{
+    margin-top: 13vw;
+}
+
+#meat form #two #body{
+    height: 25vw;
+}
+
+#meat form #twohalf{
+    height:5vw;
+}
+
+#meat form #three #note{
+    height: 10vw;
+}
+
 #main nav{
     font-family: europa, sans-serif;
     font-style: normal;
     font-weight: 100;
+}
+
+#main #navbarToggleExternalContent{
+    border-bottom: .5px solid white;
 }
 
 #main nav #drop li{
@@ -27,6 +69,7 @@ body #main{
 
 #main .container-fluid{
 
+    background-color: #eaedf1;
     height: 100%;
 
 }
@@ -45,6 +88,12 @@ body #main{
 
 #main .container-fluid #intro{
     background-color: #c44200;
+}
+
+#main .container-fluid #blogheader{
+    background-color: #eaedf1;
+    padding-top: 2vw;
+    margin-left: 8.4vw;
 }
 
 #main .container-fluid #intro #gallery{
@@ -156,6 +205,22 @@ body #main{
     margin-top: .5vw;
 }
 
+#main .container-fluid #blogmeat{
+    background-color: #eaedf1;
+    color: black;
+    text-align: left;
+}
+
+#main .container-fluid #blogmeat #feed{
+    font-size: 1.1vw;
+    margin-top: .5vw;
+}
+
+#main .container-fluid #address #sidebar{
+    font-size: 1.1vw;
+    margin-top: .5vw;
+}
+
 #main .container-fluid #address #adair a{
     text-decoration: none;
     color: white;
@@ -234,7 +299,7 @@ body #main{
 .carousel-inner img {
       width: 100%;
       height: 100%;
-    opacity: 0.86;
+    opacity: 0.9;
 }
 
 #flash-message {

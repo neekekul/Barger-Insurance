@@ -25,4 +25,18 @@ class FeatureController extends Controller
         return view('/meet');
     }
 
+    /**
+     * Show the application's registration view.
+     * Passing relevant data through the compact() to the view itself in the form of php variables.
+     *
+     * @return view('registration')
+     *
+     */
+    protected function onCreateBlog()
+    {
+        return view('/blog');
+    }
+    
+    
+
 }

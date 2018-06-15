@@ -14,7 +14,7 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body style="background-color: #d2c9bc;">
+<body style="background-color: white;">
 
 
     @yield('content')
