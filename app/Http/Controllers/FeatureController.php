@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Post;
 use App\Mail\WelcomeToBarger;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Controller;
@@ -34,7 +35,8 @@ class FeatureController extends Controller
      */
     protected function onCreateBlog()
     {
-        return view('/blog');
+        $posts = Post::latest()->get();
+        return view('/blog', compact('posts'));
     }
     
     

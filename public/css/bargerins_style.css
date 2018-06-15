@@ -209,16 +209,53 @@ body #main{
     background-color: #eaedf1;
     color: black;
     text-align: left;
+    height: 40vw;
 }
 
 #main .container-fluid #blogmeat #feed{
-    font-size: 1.1vw;
+    font-size: .8vw;
+    margin-top: -1vw;
+    height: 96%;
+    overflow-y: auto;
+    word-wrap: normal;
+    word-break: break-all;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    
+}
+
+#main .container-fluid #blogmeat #feed:before, #main .container-fluid #blogmeat #feed:after{
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+}
+
+#main .container-fluid #blogmeat #feed .blog-post{
+    font-size: .8vw;
+    margin-top: .5vw;
+    width: 100%;
+}
+
+#main .container-fluid #blogmeat #sidebar{
+    font-size: 1vw;
     margin-top: .5vw;
 }
 
-#main .container-fluid #address #sidebar{
+#main .container-fluid #blogintro{
+    background-color: #eaedf1;
+    color: black;
+    text-align: left;
+}
+
+#main .container-fluid #blogintro #title{
     font-size: 1.1vw;
-    margin-top: .5vw;
+    margin-top: 1.5vw;
+}
+
+#main .container-fluid #blogintro #search{
+    font-size: 1.1vw;
+    margin-top: 1.5vw;
 }
 
 #main .container-fluid #address #adair a{

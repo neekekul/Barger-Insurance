@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->longText('body');
             $table->string('image');
-            $table->string('summary');
+            $table->mediumText('summary');
             $table->timestamps();
         });
     }

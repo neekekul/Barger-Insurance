@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+use App\User;
+use Image;
+use Auth;
 
 class AccountController extends Controller
 {
@@ -37,7 +41,7 @@ class AccountController extends Controller
      * @return view('instructorHome', compact('msg', 'lessons', 'instructors'))
      *
      */
-    public function lessonStore(){
+    public function postStore(){
         //first completely validate the users input
         $this->validate(request(), [
             'title' => 'required|string|alpha_dash|max:100',
@@ -53,32 +57,33 @@ class AccountController extends Controller
         if($request->hasFile('image')){
             $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(700, 500)->save( public_path('/uploads/images/' . $filename) );
+            Image::make($image)->resize(700, 700)->save( public_path('/uploads/images/' . $filename) );
         }
         //ORM query
-        $lessons = Lesson::latest()->get();
-        //ORM query
-        $instructors= User::where('type','instructor')->get();
+        $user = Auth::user();
+        $ID = $user->id;
         //pull the fields into php variables
-        $courseID = request('course');
         $title = request('title');
         $body = request('body');
         $note = request('note');
         //prepare a message
         $msg = '';
         //instantiate and assign a new lesson in the lessons table
-        $lesson = new Lesson;
-        $lesson->course_id = $courseID;
-        $lesson->title = $title;
-        $lesson->body = $body;
-        $lesson->image = $filename;
-        $lesson->summary = $note;
+        $post = new Post;
+
+        $post->title = $title;
+        $post->user_id = $ID;
+        $post->body = $body;
+        $post->image = $filename;
+        $post->summary = $note;
         //try to save an give the message a value
-        if ($lesson->save()){
-            $msg = 'Lesson has been saved!';
+        if ($post->save()){
+            $msg = 'Your post has been saved!';
         }else{
-            $msg = 'Lesson has failed to be saved correctly.';
+            $msg = 'Post has failed to be saved correctly.';
         }
-        return view('instructorHome', compact('msg', 'lessons', 'instructors'));
+
+        session()->flash('message', $msg);
+        return view('/layouts/blog/createPost');
     }
 }
