@@ -16,8 +16,6 @@ body #main{
 
 #meat{
     background-color: #eaedf1;
-    height: 46.79vw;
-    overflow-y: auto;
 }
 
 #meat form{
@@ -37,7 +35,6 @@ body #main{
 }
 
 #meat form #one{
-    margin-top: 13vw;
 }
 
 #meat form #two #body{
@@ -209,14 +206,12 @@ body #main{
     background-color: #eaedf1;
     color: black;
     text-align: left;
-    height: 40vw;
+    padding-bottom: .7vw;
 }
 
 #main .container-fluid #blogmeat #feed{
     font-size: .8vw;
-    margin-top: -1vw;
-    height: 96%;
-    overflow-y: auto;
+    margin-top: -.5vw;
     word-wrap: normal;
     word-break: break-all;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;

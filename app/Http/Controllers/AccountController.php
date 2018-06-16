@@ -57,7 +57,10 @@ class AccountController extends Controller
         if($request->hasFile('image')){
             $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(700, 700)->save( public_path('/uploads/images/' . $filename) );
+            Image::make($image)->resize(1100, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save( public_path('/uploads/images/' . $filename) );
         }
         //ORM query
         $user = Auth::user();
