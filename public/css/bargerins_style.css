@@ -206,12 +206,14 @@ body #main{
     background-color: #eaedf1;
     color: black;
     text-align: left;
-    padding-bottom: .7vw;
+    height: 40vw;
 }
 
 #main .container-fluid #blogmeat #feed{
     font-size: .8vw;
-    margin-top: -.5vw;
+    margin-top: -1.5vw;
+    height: 96%;
+    overflow-y: auto;
     word-wrap: normal;
     word-break: break-all;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -234,7 +236,8 @@ body #main{
 
 #main .container-fluid #blogmeat #sidebar{
     font-size: 1vw;
-    margin-top: .5vw;
+    height: 96%;
+    margin-top: -1.5vw;
 }
 
 #main .container-fluid #blogintro{

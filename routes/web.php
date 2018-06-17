@@ -19,9 +19,14 @@ Route::post('/login', 'SessionsController@makeSession');
 Route::get('/register', 'RegistrationController@onCreate');
 Route::post('/register', 'RegistrationController@onStore');
 
+Route::get('/quote', 'FeatureController@onCreateQuote');
+
 Route::get('/meet', 'FeatureController@onCreateMeet');
 
 Route::get('/blog', 'FeatureController@onCreateBlog');
+
+Route::get('/browseBlog', 'FeatureController@onBrowsePost');
+
 Route::get('/post', 'AccountController@onCreatePost');
 Route::post('/post', 'AccountController@postStore');
 
