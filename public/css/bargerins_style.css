@@ -219,6 +219,9 @@ body #main{
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
     
 }
 
@@ -240,20 +243,112 @@ body #main{
     margin-top: -1.5vw;
 }
 
+#main .container-fluid #blogSingle{
+    background-color: #eaedf1;
+    color: black;
+    text-align: left;
+    padding-bottom: 1vw;
+}
+
+#main .container-fluid #blogSingle #feed{
+    font-size: .8vw;
+    margin-top: -1.5vw;
+    word-wrap: normal;
+    word-break: break-all;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+
+}
+
+#main .container-fluid #blogSingle #feed .blog-post{
+    font-size: .8vw;
+    margin-top: .5vw;
+    width: 100%;
+}
+
+#main .container-fluid #blogSingle #sidebar{
+    font-size: 1vw;
+    height: 96%;
+    margin-top: -1.5vw;
+}
+
+#main .container-fluid #commentfeed{
+    background-color: #eaedf1;
+    color: black;
+    text-align: left;
+    padding-bottom: 1vw;
+    height: 30vw;
+}
+
+#main .container-fluid #commentfeed .col-8{
+    font-size: .8vw;
+    margin-top: 0vw;
+    height: 100%;
+    overflow-y: auto;
+    word-wrap: normal;
+    word-break: break-all;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+
+}
+
+#main .container-fluid #commentform{
+    background-color: #eaedf1;
+    color: black;
+    text-align: left;
+    padding-bottom: 1vw;
+}
+
 #main .container-fluid #blogintro{
     background-color: #eaedf1;
     color: black;
     text-align: left;
+
 }
 
 #main .container-fluid #blogintro #title{
     font-size: 1.1vw;
     margin-top: 1.5vw;
+    height: 9vw;
 }
 
 #main .container-fluid #blogintro #search{
     font-size: 1.1vw;
-    margin-top: 1.5vw;
+    margin-top: .6vw;
+    height: 9vw;
+}
+
+#main .container-fluid #blogintro #search #quote{
+    text-align: center;
+}
+
+#main .container-fluid #blogintro #search #quote form #bestbutton{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+	border-radius: 6px;
+	width: 55%;
+	height: 80%;
+	font-size: 1.5vw;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+}
+
+#main .container-fluid #blogintro #search #quote form #bestbutton:active{
+    transform: translateY(3px);
 }
 
 #main .container-fluid #address #adair a{

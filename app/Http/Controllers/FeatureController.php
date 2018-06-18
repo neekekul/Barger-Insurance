@@ -56,31 +56,7 @@ class FeatureController extends Controller
         return view('/blog', compact('posts', 'archives'));
     }
     
-    
-    /**
-     * Show the application's registration view.
-     * Passing relevant data through the compact() to the view itself in the form of php variables.
-     *
-     * @return view('registration')
-     *
-     */
-    protected function onBrowsePost()
-    {
-        $posts = Post::latest();
 
-        if($title = request('title')){
-            $posts->where('title', $title);
-        }
-
-        $posts = $posts->get();
-
-        $archives = Post::selectRaw('year(created_at) year, monthname(created_at) month, count(*) published')
-            ->groupBy('year', 'month')
-            ->orderByRaw('min(created_at) desc')
-            ->get();
-
-        return view('/layouts/blog/browseBlog', compact('posts', 'archives'));
-    }
 
 
     /**

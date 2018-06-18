@@ -1,4 +1,4 @@
-<div id="blogmeat" class="row justify-content-around align-items-center">
+<div id="blogSingle" class="row justify-content-around align-items-center">
             <div id="feed" class="col-5">
                 @if(count($posts))
                    @foreach($posts as $post)
@@ -13,10 +13,6 @@
                             <h4>Summary:</h4>
                             <p>{{ $post->summary }}</p>
                             <br>
-                            <form action="/browseBlog" method="GET">
-                               {{ csrf_field() }}
-                                <button id="bestbutton" type="submit" name="title" value="{{ $post->title }}">CHECK IT OUT</button>
-                            </form>
                             <hr>
                         </div>
                     @endforeach

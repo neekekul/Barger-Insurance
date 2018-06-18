@@ -25,7 +25,8 @@ Route::get('/meet', 'FeatureController@onCreateMeet');
 
 Route::get('/blog', 'FeatureController@onCreateBlog');
 
-Route::get('/browseBlog', 'FeatureController@onBrowsePost');
+Route::get('/browseBlog', 'AccountController@onBrowsePost');
+Route::post('/browseBlog', 'AccountController@commentStore');
 
 Route::get('/post', 'AccountController@onCreatePost');
 Route::post('/post', 'AccountController@postStore');

@@ -4,6 +4,11 @@
 @section('content')
 <div id="main" class="container-fluid">
     @include('layouts.biHead')
+    @if($flash = session('message'))
+      <div id="flash-message" class="alert alert-success" role="alert">
+          {{ $flash }}
+      </div>
+    @endif
     <div class="container-fluid">
         @include('layouts.landing.biLogo')
         <div class="row justify-content-around align-items-end" style="background-color: white;">

@@ -16,4 +16,14 @@ class Post extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * Retrieve the comments associated with a specific lesson by a foreign key.
+     *
+     * @params  n/a
+     * @return  php variable $this that has many Comments.
+     */
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 }
