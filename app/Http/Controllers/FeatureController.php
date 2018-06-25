@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Post;
+use Image;
 use Carbon\Carbon;
 use App\Mail\WelcomeToBarger;
 use Illuminate\Support\Facades\Mail;
@@ -68,6 +69,16 @@ class FeatureController extends Controller
      */
     protected function onCreateQuote()
     {
+
+        $imgLife = Image::make(public_path('/images/before/Family_Life_Insurance.png'))->resize(212, 212, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save( public_path('/images/familylifeinsurance.png') );
+
+        $imgCar = Image::make(public_path('/images/before/Car_Insurance.png'))->resize(212, 212, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->save( public_path('/images/carinsurance.png') );
 
         return view('/quote');
     }

@@ -46,7 +46,7 @@ class AccountController extends Controller
         //first completely validate the users input
         $this->validate(request(), [
             'title' => 'required|string|alpha_dash|max:100',
-            'body' => 'required|string|alpha_dash|max:13000',
+            'body' => 'required|string|max:13000',
             'image' => 'file|image',
             'note' => 'string|max:700',
         ]);

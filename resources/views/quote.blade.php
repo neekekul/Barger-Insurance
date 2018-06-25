@@ -8,6 +8,7 @@
         @include('layouts.biHead')
 
         <div class="container-fluid">
+        	@include('layouts.quote.coverageIcons')
 
 
         </div>

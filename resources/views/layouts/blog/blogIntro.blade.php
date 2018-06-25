@@ -6,7 +6,7 @@
             </div>
             <div id="search" class="col-5">
                 <div id="quote" class="col-sm">
-                    <h1 id="savings">Contribute!</h1>
+                    <h2 id="savings">Contribute!</h2>
                     <form action="/post" method="GET">
                         <button id="bestbutton" type="submit">CREATE POST</button>
                     </form>
