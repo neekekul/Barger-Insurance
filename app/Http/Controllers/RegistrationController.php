@@ -85,7 +85,7 @@ class RegistrationController extends Controller
 
         auth()->login($user);
 
-        Mail::to($user)->send(new WelcomeToBarger($user));
+        //Mail::to($user)->send(new WelcomeToBarger($user));
 
         session()->flash('message', $msg);
 
